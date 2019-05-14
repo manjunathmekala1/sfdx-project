@@ -19,4 +19,5 @@ before_install:
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
 
-- sfdx force:mdapi:deploy -u HubOrg
+- sfdx force:mdapi:deploy [-c | -i 00D90000000mkm5EAA] [-d C:\sfdx-travisci | -f C:\sfdx-travisci] [-w 10] [-l NoTestRun|RunSpecifiedTests|RunLocalTests|RunAllTestsInOrg] [-r 5] [-e
+  false] [-o] [-g] [-q ] [-u manjunath.mekala@developer.com] [--apiversion 40.0] [--verbose] [--json] [--loglevel trace|debug|info|warn|error|fatal]
