@@ -19,4 +19,4 @@ before_install:
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
 
-- sfdx force:mdapi:deploy --deploydir mdapi_output_dir --targetusername manjunath.mekala@developre.com
+- sfdx force:mdapi:deploy --deploydir mdapi_output_dir --targetusername manjunath.mekala@developer.com
