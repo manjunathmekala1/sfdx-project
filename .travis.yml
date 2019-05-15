@@ -19,4 +19,4 @@ before_install:
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
 
-- sfdx force:mdapi:deploy -c -f ../mdAPIZip/unpackaged.zip -u ManjDev0rg -w 10
+- sfdx force:mdapi:deploy -c -f ../mdAPIZip/unpackaged.zip -u HubOrg -w 10
