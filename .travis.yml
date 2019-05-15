@@ -18,5 +18,14 @@ before_install:
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
+#Convert to MDAPI format for deployment to prod
 
-- sfdx force:mdapi:deploy --deploydir mdapi_output_dir --targetusername manjunath.mekala@developer.com
+echo "Converting to MDAPI format..."
+
+-sfdx force:source:convert -d deploy_prod -r force-app 
+
+#Deploy to prod & run all tests
+
+echo "Deploying to production & running all tests..."
+
+-sfdx force:mdapi:deploy -u HubOrg -d ./mdAPIZip/unpackaged -w -1 -l RunAllTestsInOrg
